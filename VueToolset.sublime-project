@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"path": "dist"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "public"
+		},
+		{
+			"path": "src"
+		},
+		{
+			"path": "wp"
+		},
+		{
+			"path": ".git"
+		},
+		{
+			"path": ".phpintel"
+		},
+		{
+			"path": ".vscode"
+		}
+	]
+}

@@ -1,0 +1,90 @@
+.button-base {
+  border: none;
+  border-radius: @button-border-radius;
+  cursor: pointer;
+  font-weight: @font-weight-bold;
+  transition: background-color @transition-fast, opacity @transition-fast, transform @transition-fast;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.button-small {
+  .button-base(); // Hereda las propiedades base
+  padding: @button-padding-small;
+  font-size: @button-font-size-small;
+}
+
+.button-medium {
+  .button-base(); // Hereda las propiedades base
+  padding: @button-padding-medium;
+  font-size: @button-font-size-medium;
+}
+
+.button-large {
+  .button-base(); // Hereda las propiedades base
+  padding: @button-padding-large;
+  font-size: @button-font-size-large;
+}
+
+.button-primary {
+  background-color: @primary-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: darken(@primary-color, 10%);
+  }
+}
+
+.button-secondary {
+  background-color: @secondary-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: darken(@secondary-color, 10%);
+  }
+}
+
+.button-success {
+  background-color: @success-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: darken(@success-color, 10%);
+  }
+}
+
+.button-error {
+  background-color: @error-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: darken(@error-color, 10%);
+  }
+}
+
+
+.error-message {
+  color: @error-color;
+  font-size: @font-size-small;
+  margin-top: @spacing-xsmall;
+}
+
+.button-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

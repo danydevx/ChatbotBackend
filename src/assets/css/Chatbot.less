@@ -1,0 +1,204 @@
+// 1. Variables Globales
+@import 'variables.less';
+
+// 2. Mixins
+.button-variant(@background, @color) {
+  background-color: @background;
+  color: @color;
+
+  &:hover:not(:disabled) {
+    background-color: darken(@background, 10%);
+  }
+}
+
+.input-variant(@border-color, @focus-border-color, @error-border-color) {
+  border-color: @border-color;
+
+  &:focus {
+    border-color: @focus-border-color;
+    box-shadow: 0 0 0 2px fade(@focus-border-color, 20%);
+  }
+
+  &.input-error {
+    border-color: @error-border-color;
+
+    &:focus {
+      box-shadow: 0 0 0 2px fade(@error-border-color, 20%);
+    }
+  }
+}
+
+// 3. Clases Base
+.button-base {
+  border: none;
+  border-radius: @button-border-radius;
+  cursor: pointer;
+  font-weight: @font-weight-bold;
+  transition: background-color @transition-fast, opacity @transition-fast, transform @transition-fast;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.input-base {
+  border: @input-border-width solid @input-border-color;
+  border-radius: @input-border-radius;
+  font-family: @font-family;
+  transition: @input-transition;
+  width: 100%;
+ 
+  outline: none;
+
+  &:disabled {
+    background-color: @input-disabled-background;
+    cursor: not-allowed;
+  }
+}
+
+
+
+// 5. Clases Utilitarias
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: @spacing-small;
+}
+
+.mt-2 {
+  margin-top: @spacing-medium;
+}
+
+.mt-3 {
+  margin-top: @spacing-large;
+}
+
+.mb-1 {
+  margin-bottom: @spacing-small;
+}
+
+.mb-2 {
+  margin-bottom: @spacing-medium;
+}
+
+.mb-3 {
+  margin-bottom: @spacing-large;
+}
+
+// 6. Botones
+.button-primary {
+  .button-base();
+  .button-variant(@primary-color, white);
+}
+
+.button-secondary {
+  .button-base();
+  .button-variant(@secondary-color, white);
+}
+
+.button-success {
+  .button-base();
+  .button-variant(@success-color, white);
+}
+
+.button-error {
+  .button-base();
+  .button-variant(@error-color, white);
+}
+
+// 7. Inputs
+.input-small {
+  .input-base();
+  padding: @input-padding-small;
+  font-size: @input-font-size-small;
+  .input-variant(@input-border-color, @input-focus-border-color, @input-error-border-color);
+}
+
+.input-medium {
+  .input-base();
+  padding: @input-padding-medium;
+  font-size: @input-font-size-medium;
+  .input-variant(@input-border-color, @input-focus-border-color, @input-error-border-color);
+}
+
+.input-large {
+  .input-base();
+  padding: @input-padding-large;
+  font-size: @input-font-size-large;
+  .input-variant(@input-border-color, @input-focus-border-color, @input-error-border-color);
+}
+
+// Chatbot Map
+.chatbox-map-container {
+  height: 40vh;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatbox-map-search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0px;
+}
+
+.chatbox-map-search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chatbox-map-search-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+}
+
+
+//helpers
+
+.button-icon {
+     background:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border:none;
+
+    i {
+      font-size: 1.8rem;
+      color:white;
+    }
+  }

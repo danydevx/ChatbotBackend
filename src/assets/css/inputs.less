@@ -1,0 +1,169 @@
+.input-base {
+  border: @input-border-width solid @input-border-color;
+  border-radius: @input-border-radius;
+  font-family: @font-family;
+  transition: @input-transition;
+  width: 100%;
+  max-width: @input-max-width;
+  outline: none;
+
+  &:focus {
+    border-color: @input-focus-border-color;
+    box-shadow: 0 0 0 2px fade(@input-focus-border-color, 20%);
+  }
+
+  &:disabled {
+    background-color: @input-disabled-background;
+    cursor: not-allowed;
+  }
+
+  &.input-error {
+    border-color: @input-error-border-color;
+
+    &:focus {
+      box-shadow: 0 0 0 2px fade(@input-error-border-color, 20%);
+    }
+  }
+}.input-base {
+  border: @input-border-width solid @input-border-color;
+  border-radius: @input-border-radius;
+  font-family: @font-family;
+  transition: @input-transition;
+  width: 100%;
+  max-width: @input-max-width;
+  outline: none;
+
+  &:focus {
+    border-color: @input-focus-border-color;
+    box-shadow: 0 0 0 2px fade(@input-focus-border-color, 20%);
+  }
+
+  &:disabled {
+    background-color: @input-disabled-background;
+    cursor: not-allowed;
+  }
+
+  &.input-error {
+    border-color: @input-error-border-color;
+
+    &:focus {
+      box-shadow: 0 0 0 2px fade(@input-error-border-color, 20%);
+    }
+  }
+}
+
+.input-small {
+  .input-base();
+  padding: @input-padding-small;
+  font-size: @input-font-size-small;
+}
+
+.input-medium {
+  .input-base();
+  padding: @input-padding-medium;
+  font-size: @input-font-size-medium;
+}
+
+.input-large {
+  .input-base();
+  padding: @input-padding-large;
+  font-size: @input-font-size-large;
+}
+
+.select-small {
+  .input-base();
+  padding: @input-padding-small;
+  font-size: @input-font-size-small;
+}
+
+.select-medium {
+  .input-base();
+  padding: @input-padding-medium;
+  font-size: @input-font-size-medium;
+}
+
+.select-large {
+  .input-base();
+  padding: @input-padding-large;
+  font-size: @input-font-size-large;
+}
+
+.textarea-small {
+  .input-base();
+  padding: @input-padding-small;
+  font-size: @input-font-size-small;
+  resize: vertical;
+}
+
+.textarea-medium {
+  .input-base();
+  padding: @input-padding-medium;
+  font-size: @input-font-size-medium;
+  resize: vertical;
+}
+
+.textarea-large {
+  .input-base();
+  padding: @input-padding-large;
+  font-size: @input-font-size-large;
+  resize: vertical;
+}
+
+.checkbox-base {
+  cursor: pointer;
+  accent-color: @primary-color; // Cambia el color del checkbox/radio
+  width: @font-size-medium;
+  height: @font-size-medium;
+  transition: opacity @transition-fast;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.checkbox-small {
+  .checkbox-base();
+  width: @font-size-small;
+  height: @font-size-small;
+}
+
+.checkbox-medium {
+  .checkbox-base();
+  width: @font-size-medium;
+  height: @font-size-medium;
+}
+
+.checkbox-large {
+  .checkbox-base();
+  width: @font-size-large;
+  height: @font-size-large;
+}
+
+.range-base {
+  width: 100%;
+  max-width: @input-max-width;
+  cursor: pointer;
+  accent-color: @primary-color; // Cambia el color del rango
+  transition: opacity @transition-fast;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.range-small {
+  .range-base();
+  height: @spacing-small;
+}
+
+.range-medium {
+  .range-base();
+  height: @spacing-medium;
+}
+
+.range-large {
+  .range-base();
+  height: @spacing-large;
+}
