@@ -7,9 +7,7 @@
 - [Vue 3](https://vuejs.org/) + Composition API  
 - [Vite](https://vitejs.dev/) para desarrollo rápido y build optimizado  
 - [Pinia](https://pinia.vuejs.org/) para el manejo del estado  
-- [Vue Router](https://router.vuejs.org/) para navegación entre vistas  
-- [Tailwind CSS](https://tailwindcss.com/) (opcional, si estás usando estilos utilitarios)
-
+ 
 ## ✨ Funcionalidades principales
 
 - Visualización y gestión de conversaciones en tiempo real
